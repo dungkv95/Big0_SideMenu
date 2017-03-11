@@ -13,7 +13,7 @@ class ContainerVC: UIViewController {
     @IBOutlet weak var sideMenuViewContainer: UIView!
     @IBOutlet weak var mainViewContainer: UIView!
     @IBOutlet weak var leftSideMenuConstraint: NSLayoutConstraint!
-    
+    @IBOutlet weak var corverButton: UIButton!
     
     var isSideMenuOpen: Bool = true {
         didSet {
@@ -22,8 +22,9 @@ class ContainerVC: UIViewController {
             } else {
                 configForSideMenuClosingState()
             }
-            UIView.animate(withDuration: 0.35, animations: { 
-                self.view.layoutIfNeeded()
+            UIView.animate(withDuration: 0.35, animations: {
+                   self.view.layoutIfNeeded()
+                
             }) { (isSuccess) in
                 // TODO:
             }
@@ -32,14 +33,18 @@ class ContainerVC: UIViewController {
     }
     
     func configForSideMenuOpeningState() {
-        leftSideMenuConstraint.constant = 0
+            self.leftSideMenuConstraint.constant = 0
+            self.corverButton.alpha = 0.5
     }
     
     func configForSideMenuClosingState() {
-        leftSideMenuConstraint.constant = -sideMenuViewContainer.bounds.width
+            self.leftSideMenuConstraint.constant = -self.sideMenuViewContainer.bounds.width
+            self.corverButton.alpha = 0
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view, typically from a nib.
     }
 

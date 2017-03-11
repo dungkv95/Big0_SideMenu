@@ -27,9 +27,9 @@
                                     <segue destination="oeV-lK-wy9" kind="embed" id="YOe-6C-OZa"/>
                                 </connections>
                             </containerView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tcf-tI-Mgk">
+                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tcf-tI-Mgk">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="deviceWhite"/>
+                                <color key="backgroundColor" name="windowFrameTextColor" catalog="System" colorSpace="catalog"/>
                                 <connections>
                                     <action selector="onClickCorverButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="QkI-Su-2Et"/>
                                 </connections>
@@ -60,7 +60,7 @@
                         </constraints>
                     </view>
                     <connections>
-
+                        <outlet property="corverButton" destination="Tcf-tI-Mgk" id="V9c-1l-Lul"/>
                         <outlet property="leftSideMenuConstraint" destination="965-EK-XMP" id="VA0-Qv-6dg"/>
                         <outlet property="mainViewContainer" destination="Viz-Do-dIf" id="WfS-8L-v3L"/>
                         <outlet property="sideMenuViewContainer" destination="Dm0-Xs-jLg" id="QZD-14-H8S"/>
