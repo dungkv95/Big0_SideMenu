@@ -150,10 +150,10 @@
             </objects>
             <point key="canvasLocation" x="105.59999999999999" y="974.6626686656673"/>
         </scene>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="sXn-lU-fkH">
             <objects>
-                <viewController id="tes-Y6-qk0" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="tes-Y6-qk0" customClass="MainViewController" customModule="SideMenu" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="FiJ-DJ-EUH"/>
                         <viewControllerLayoutGuide type="bottom" id="vIm-6U-AQi"/>
@@ -164,7 +164,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="IyS-Hd-hvF">
-                        <barButtonItem key="leftBarButtonItem" title="Menu" id="0UH-Wg-rJ2"/>
+                        <barButtonItem key="leftBarButtonItem" title="Menu" id="0UH-Wg-rJ2">
+                            <connections>
+                                <action selector="onClickMenu" destination="tes-Y6-qk0" id="Ldm-tw-v7t"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0JK-i3-0gC" userLabel="First Responder" sceneMemberID="firstResponder"/>

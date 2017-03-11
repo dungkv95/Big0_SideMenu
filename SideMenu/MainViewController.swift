@@ -21,7 +21,9 @@ class MainViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
+    @IBAction func onClickMenu() {
+        NotificationCenter.default.post(name: NotificationKey.menuClick, object: nil)
+    }
     /*
     // MARK: - Navigation
 
@@ -32,4 +34,8 @@ class MainViewController: UIViewController {
     }
     */
 
+}
+
+struct NotificationKey {
+    static let menuClick = NSNotification.Name.init("menuClick")
 }
