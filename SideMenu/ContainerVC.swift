@@ -18,6 +18,7 @@ class ContainerVC: UIViewController {
     var isSideMenuOpen: Bool = true {
         didSet {
             if isSideMenuOpen {
+                
                 configForSideMenuOpeningState()
             } else {
                 configForSideMenuClosingState()
@@ -26,13 +27,18 @@ class ContainerVC: UIViewController {
                    self.view.layoutIfNeeded()
                 
             }) { (isSuccess) in
-                // TODO:
+                if self.isSideMenuOpen {
+                    
+                } else {
+                    self.sideMenuViewContainer.clipsToBounds = true
+                }
             }
             
         }
     }
     
     func configForSideMenuOpeningState() {
+        self.sideMenuViewContainer.clipsToBounds = false
             self.leftSideMenuConstraint.constant = 0
             self.corverButton.alpha = 0.5
     }

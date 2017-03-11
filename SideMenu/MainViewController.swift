@@ -39,3 +39,4 @@ class MainViewController: UIViewController {
 struct NotificationKey {
     static let menuClick = NSNotification.Name.init("menuClick")
 }
+
