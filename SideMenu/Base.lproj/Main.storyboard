@@ -60,8 +60,10 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="mainViewContainer" destination="Viz-Do-dIf" id="Vr5-MM-sze"/>
-                        <outlet property="sideMenuViewContainer" destination="Dm0-Xs-jLg" id="WR2-Uo-feG"/>
+
+                        <outlet property="leftSideMenuConstraint" destination="965-EK-XMP" id="VA0-Qv-6dg"/>
+                        <outlet property="mainViewContainer" destination="Viz-Do-dIf" id="WfS-8L-v3L"/>
+                        <outlet property="sideMenuViewContainer" destination="Dm0-Xs-jLg" id="QZD-14-H8S"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

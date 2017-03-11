@@ -12,6 +12,7 @@ class ContainerVC: UIViewController {
 
     @IBOutlet weak var sideMenuViewContainer: UIView!
     @IBOutlet weak var mainViewContainer: UIView!
+    @IBOutlet weak var leftSideMenuConstraint: NSLayoutConstraint!
     
     
     var isSideMenuOpen: Bool = true {
@@ -20,17 +21,22 @@ class ContainerVC: UIViewController {
                 configForSideMenuOpeningState()
             } else {
                 configForSideMenuClosingState()
-
             }
+            UIView.animate(withDuration: 0.35, animations: { 
+                self.view.layoutIfNeeded()
+            }) { (isSuccess) in
+                // TODO:
+            }
+            
         }
     }
     
     func configForSideMenuOpeningState() {
-        
+        leftSideMenuConstraint.constant = 0
     }
     
     func configForSideMenuClosingState() {
-        
+        leftSideMenuConstraint.constant = -sideMenuViewContainer.bounds.width
     }
     override func viewDidLoad() {
         super.viewDidLoad()
